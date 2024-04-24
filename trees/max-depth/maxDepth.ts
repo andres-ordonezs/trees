@@ -7,17 +7,31 @@ import { TreeNodeNum } from "../common/tree";
 
 function maxDepth(node: TreeNodeNum | null): number {
   let length = 1;
+  let maxLength =1
 
+
+  length > maxLength 
 
   for (let child of node!.children) {
     // length += maxDepth(child);
-    if (node!.children) return length--;
     length += maxDepth(child);
 
   }
 
   return length++;
 }
+
+
+//            1
+//          / | \
+//        2   3   4
+//               / \
+//              5   6
+//                   \
+//                    7
+//                     \
+//                      8
+
 
 
 export { maxDepth };
